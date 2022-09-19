@@ -109,6 +109,24 @@ var frase = prompt("Introduce una frase:","")
 
 document.write(" Longitud  "+ frase.length);
 
-document.write(" Mayusculas "+ frase.toUpperCase);
+document.write(" - Mayusculas: "+ frase.toUpperCase());
 
-document.write(" Minuscula "+ frase.toLowerCase);
+document.write(" - Minuscula: "+ frase.toLowerCase());
+
+var cadena =frase.split(" ");
+
+document.write("<br> Cadena normal: <br>")
+
+for (i in cadena){
+
+    document.write(cadena[i]+"<br>");
+
+}
+
+document.write("<br> Cadena invertida: <br>")
+
+for (var i = cadena.length-1; i >= 0; i--) {
+
+    document.write(cadena[i]+"<br>");
+    
+}
