@@ -1,7 +1,7 @@
+/* 
+ //Ejercicio1
 
-//Ejercicio1
-
-/* alert("Introduce 5 numeros");
+alert("Introduce 5 numeros");
 //Creamos las variables
 
 var contador = 0;
@@ -19,7 +19,7 @@ for ( i = 0; i < 5; i++) {
 
 //Utilizamos un if para que la variable contador sume en 1 si es mayor o igual a 100
 
-    if(numero>=100){
+    if(numero>100){
         contador++;
     }
     
@@ -28,11 +28,10 @@ for ( i = 0; i < 5; i++) {
 //Mostramos el resultado
 
 alert(cantidadnum);
-alert(contador); */
+alert(contador);  */
 
 
-
-/* //Ejercicio 2
+ /* //Ejercicio 2
 
 alert("Ejercicio2")
 
@@ -41,15 +40,15 @@ var suma=0;
 
 for (i = 0; i < numeros.length; i++) {
     
-    if (numeros[i]>=8) {
+    if (numeros[i]>8) {
 
         suma+=numeros[i];
         
     }
 }
-alert(suma); */
+alert(suma);  */
 
-/* //Ejercicio 3
+ /* //Ejercicio 3
 
 alert("Ejercicio 3");
 
@@ -73,11 +72,10 @@ if (mes=="Enero"||mes=="Febrero"||mes=="Diciembre") {
     alert("No es ningun mes")
 }
 
- */
 
-/* //Ejercicio 4
+/* /* //Ejercicio 4 */
 
-alert("Ejercicio 4");
+/* alert("Ejercicio 4");
 
 var numero=parseInt(prompt("Introduce un numero:", ""));
 
@@ -85,11 +83,11 @@ if(numero%2==0){
     alert("es par");
 }else{
     alert("es impar");
-} */
+}
+ */ 
+ //Ejercicio 5
 
-/* //Ejercicio 5
-
-alert("Ejercicio 5");
+/*  alert("Ejercicio 5");
 
 var precio=parseInt(prompt("Introduce un precio:", ""));
 
@@ -98,9 +96,9 @@ var iva = precio * 0.21;
 var total = iva + precio;
 
 alert("El iva es:"+ iva.toFixed(2));
-alert("Precio total:"+total.toFixed(2)); */
-
-//Ejercicio 6
+alert("Precio total:"+total.toFixed(2)); 
+ */
+ //Ejercicio 6
 
 alert("Ejercicio 6")
 
