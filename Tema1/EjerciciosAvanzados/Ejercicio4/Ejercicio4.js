@@ -1,12 +1,12 @@
-var navegador = navigator.userAgent;
 
-if (navegador != "msie") {
+var navegador = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+//alert(navegador);
+if (navegador) {
 
-alert("OPERACION NO PERMITIDA EN ESTE NAVEGADOR");
+window.open("","pagina2","toolbar=yes,location=no,menubar=yes"+ "width=500,height=500");
 
 }else{
 
-var nueva = window.open("","pagina2","toolbar=yes,location=no,menubar=yes"+ "width=500,height=500");
-
+alert("OPERACION NO PERMITIDA EN ESTE NAVEGADOR");
 
 }

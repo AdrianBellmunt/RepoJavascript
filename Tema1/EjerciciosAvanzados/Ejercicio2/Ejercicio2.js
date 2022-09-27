@@ -56,5 +56,6 @@ switch (mes) {
             alert("Otoño");
         break;
     default:
+        alert("Mes no valido")
         break;
 } 

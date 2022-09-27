@@ -7,7 +7,7 @@ function Operaciones($precio) {
     var total = iva + $precio;
 
     alert("Iva: "+iva);
-    alert("Precio Total: "+total);
+    alert("Precio Total: "+total.toFixed(2));
     
 }
 

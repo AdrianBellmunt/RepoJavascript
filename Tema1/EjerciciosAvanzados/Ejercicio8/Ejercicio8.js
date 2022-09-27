@@ -9,3 +9,9 @@ var protocolo = window.location.protocol;
 alert(urldocument)
 alert(pathname)
 alert(protocolo)
+
+function Google() {
+
+    window.location.href="https://www.google.com/webhp";
+    
+}
