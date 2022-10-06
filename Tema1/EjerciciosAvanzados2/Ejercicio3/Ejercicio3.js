@@ -1,8 +1,6 @@
 function inicializar(){
 
     valor.value="0";
-
-
 }
 
 function suma() {
