@@ -32,8 +32,19 @@ function clonar(){
 }
     
 function SublistaDOM() {
+    var ubicacion = document.getElementById("animal");
     var nuevoParrafo = document.createElement('ul');
-    nuevoParrafo.appendChild(document.createTextNode('Salvaje'));
-    var viejoParrafo = document.getElementById('animal').getElementsByTagName('ul')[1];
-    document.getElementById('animal').appendChild(viejoParrafo);
+    var content = document.createElement("li")
+    content.appendChild(document.createTextNode('Salvaje'));
+    nuevoParrafo.appendChild(content);
+    var viejoParrafo = document.getElementById('animal').getElementsByTagName('li')[1];
+   ubicacion.insertBefore(nuevoParrafo,viejoParrafo);
+}
+
+function SublistaInner() {
+    var contenido = document.createElement("ul");
+    contenido.innerHTML+="<li> salvaje </li>";
+    document.getElementsByTagName("li")[0].appendChild(contenido);
+    
+    
 }
