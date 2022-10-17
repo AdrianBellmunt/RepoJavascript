@@ -29,3 +29,15 @@ function numero_de_enlaces(){
         alert(text);
 
     }
+
+    function colorVerde() {
+
+        document.getElementById('enlaces').style.background='green';
+        
+    }
+
+    function desactivarColor() {
+
+        document.getElementById('enlaces').style.background='white';
+        
+    }
