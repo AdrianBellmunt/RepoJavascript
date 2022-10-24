@@ -9,7 +9,7 @@ function sumar(){
    var posicion = document.getElementById("primerDiv").getElementsByTagName('p')[0];
    document.getElementById("primerDiv").replaceChild(parrafo,posicion);
 }
-function ponerValorCero(){
+function Inicializar(){
     valor = 0;
     var parrafo = document.createElement('p');
     var texto = document.createTextNode(valor);

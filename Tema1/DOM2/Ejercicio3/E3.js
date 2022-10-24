@@ -22,11 +22,11 @@ function numero_de_enlaces(){
       var parrafo = document.getElementsByTagName("p");
        for (var i=0 ;i<parrafo.length;i++){
         var enlaces = document.getElementsByTagName("p")[i].getElementsByTagName("a");
-        var conjuntoEnlaces = "";
+        var grupodeEnlaces = "";
         for(var x = 0; x<enlaces.length;x++){
-            conjuntoEnlaces  = conjuntoEnlaces + "" + enlaces[x].getAttribute("href") + " ";
+          grupodeEnlaces  = grupodeEnlaces + "" + enlaces[x].getAttribute("href") + " ";
         }
-        alert(conjuntoEnlaces);
+        alert(grupodeEnlaces);
     }
 
     }
