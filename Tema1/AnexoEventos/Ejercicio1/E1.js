@@ -1,25 +1,17 @@
-$(document).ready(function(){
 
-    var hvalue = "";
-
-    $("#direccion").on("submit", function (e) {   
-        if($('#chkbxDireccion').is(':checked')){
-            if( $("#txtind").val().length < 1 ){
-                alert("El texto esta vacio");
-                e.preventDefault();
-            } else {
-                hvalue = $('#txtdir').val();
-                $('.direccion_div').val(hvalue);
-            }
-        } else {
-            if($("#txtind").val().length < 1 ){
-               alert("El texto esta vacio");
-               e.preventDefault();
-            } else {
-                hvalue = $('.direccion_div').text();
-            }
-        }
-
-        $(this).append("<input type='hidden' name='dir' value=' " + hvalue + " '/>");
-    });
-});
+window.onload = function(){
+  var formulario = document.getElementById("formulario");
+  formulario.addEventListener("submit", comprobarespacios);
+}
+  
+function comprobarespacios(event){
+  var Nombre = document.getElementById("Nombre");
+  var Apellido = document.getElementById("Apellido");
+  var telefono = document.getElementById("telefono");
+  if(Nombre.value=="" || Apellido.value=="" || telefono.value==""){
+    alert("No enviado");
+    event.preventDefault();
+  }else{
+    alert("Enviado");
+  }
+}

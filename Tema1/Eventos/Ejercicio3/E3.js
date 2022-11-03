@@ -1,5 +1,5 @@
-function cambiarletra(){
-    var evento = this.event || window.event;
+function cambiarletra(evento){
+    //var evento = this.event || window.event;
     switch(evento.type) {
         case "mouseover":
             this.style.fontSize = "16pt";
