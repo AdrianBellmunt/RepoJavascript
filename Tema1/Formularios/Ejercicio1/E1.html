@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="E1.js"></script>
+    <title>Formularios E1</title>
+</head>
+<body>
+    <h1>FORMULARIO</h1>
+
+    <form name ="formulario" >
+        <label for="fname">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" value=""><br>
+        <label for="lname">Apellido:</label>
+        <input type="text" id="lname" name="lname" value=""><br>
+
+        <label for="lname">Telefono:</label>
+        <input type="text" id="lname" name="lname" value=""><br>
+        <label for="lname">DNI:</label>
+        <input type="text" id="lname" name="lname" value=""><br>
+        <label for="lname">Edad:</label>
+        <input type="text" id="lname" name="lname" value=""><br>
+        <label for="Sexo">Sexo:</label><br>
+        <input type="radio" id="Sexo" name="fav_language" value="Sexo">
+        <label for="Hombre">Hombre</label><br>
+        <input type="radio" id="Sexo" name="fav_language" value="Sexo">
+        <label for="Hombre">Mujer</label><br>
+
+        <label for="files">Incluir mi foto:</label>
+        <input   accept="image/png,image/jpeg" type="file" id="files" name="files" multiple><br><br>
+
+        <label>Elige tu aficion favorita:
+
+        <select id = "aficion" onchange="aficiones()">
+            <option value="Musica">Musica</option>
+            <option value="Deporte" selected>Deporte</option>
+            <option value="Lectura">Lectura</option>
+        </select>
+
+        <p id="texto"></p>
+        <p id="texto2"></p>
+
+    </label>
+
+
+        <input type="checkbox" id="publicidad" name="publicidad" value="publicidad">
+        <label for="publicidad"> Enviar Publicidad</label><br>
+       <h5>Observaciones:</h5>
+        <textarea id = "Observaciones"name="Observaciones" rows="10" cols="30"></textarea>
+        <br><br>
+
+        <input type="submit" value="Guardar Cambios">
+        <input type="submit" value="Borrar los datos introducidos">
+      </form> 
+    
+</body>
+</html>
