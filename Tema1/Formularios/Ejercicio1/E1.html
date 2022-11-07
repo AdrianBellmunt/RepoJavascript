@@ -10,18 +10,18 @@
 <body>
     <h1>FORMULARIO</h1>
 
-    <form name ="formulario" >
+    <form id="form" name ="formulario" >
         <label for="fname">Nombre:</label>
         <input type="text" id="nombre" name="nombre" value=""><br>
         <label for="lname">Apellido:</label>
-        <input type="text" id="lname" name="lname" value=""><br>
+        <input type="text" id="Apellido" name="Apellido" value=""><br>
 
         <label for="lname">Telefono:</label>
-        <input type="text" id="lname" name="lname" value=""><br>
+        <input type="text" id="telefono" name="telefono" value=""><br>
         <label for="lname">DNI:</label>
-        <input type="text" id="lname" name="lname" value=""><br>
+        <input type="text" id="dni" name="dni" value=""><br>
         <label for="lname">Edad:</label>
-        <input type="text" id="lname" name="lname" value=""><br>
+        <input type="text" id="edad" name="edad" value=""><br>
         <label for="Sexo">Sexo:</label><br>
         <input type="radio" id="Sexo" name="fav_language" value="Sexo">
         <label for="Hombre">Hombre</label><br>
@@ -33,27 +33,24 @@
 
         <label>Elige tu aficion favorita:
 
-        <select id = "aficion" onchange="aficiones()">
+        <select id = "aficion">
             <option value="Musica">Musica</option>
             <option value="Deporte" selected>Deporte</option>
             <option value="Lectura">Lectura</option>
         </select>
 
-        <p id="texto"></p>
-        <p id="texto2"></p>
+    </label><br>
 
-    </label>
-
-
+    <br>
         <input type="checkbox" id="publicidad" name="publicidad" value="publicidad">
         <label for="publicidad"> Enviar Publicidad</label><br>
        <h5>Observaciones:</h5>
-        <textarea id = "Observaciones"name="Observaciones" rows="10" cols="30"></textarea>
+        <textarea rows="10" cols="30" name="texto" onKeyDown="valida_longitud()" onKeyUp="valida_longitud()"></textarea>
         <br><br>
 
         <input type="submit" value="Guardar Cambios">
-        <input type="submit" value="Borrar los datos introducidos">
-      </form> 
+        <input type="reset"  value="Borrar los datos introducidos">
+    </form> 
     
 </body>
 </html>
