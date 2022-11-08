@@ -15,10 +15,11 @@ window.onload = function () {
    }
 
     
+    function valida_longitud(){
+
+       
     contenido_textarea = ""
     num_caracteres_permitidos = 150
-    
-    function valida_longitud(){
        num_caracteres = document.forms[0].texto.value.length
     
        if (num_caracteres > num_caracteres_permitidos){
@@ -40,22 +41,25 @@ window.onload = function () {
        document.forms[0].caracteres.value=document.forms[0].texto.value.length
     } 
 
-    function validarFormulario() {
+    function validarFormulario(evento) {
 
       telefono = document.getElementById("telefono").value;
       if( !(/^\d{9}$/.test(telefono)) ) {
-      alert("numero no existe");
+      alert("formato de telefono no correcto");
+      evento.preventDefault();
       }
        
       dni = document.getElementById("dni").value;
       var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
       
       if( !(/^\d{8}[A-Z]$/.test(dni)) ) {
-        alert("Error DNI")
+        alert("Formato DNI no correcto")
+        evento.preventDefault();
       }
       
       if(valor.charAt(8) != letras[(dni.substring(0, 8))%23]) {
         alert("Error DNI")
+        evento.preventDefault();
       }
    
 }

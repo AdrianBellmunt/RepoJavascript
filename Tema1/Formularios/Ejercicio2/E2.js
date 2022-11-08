@@ -1,12 +1,9 @@
 window.onload = function () {
-    
-    var x = document.getElementById("color");
-    x.addEventListener("change", cambiarcolor);
-
+    document.getElementById("color").onchange = cambiarcolor;
 }
 
 function cambiarcolor() {
-    var colorear = document.form.color.value;
-    document.getElementById("parrafo").style.color = colorear;
-
+    var index = this.selectedIndex
+    var valor = this[index].value
+    document.getElementById("parrafo").style.backgroundColor = valor;
 }
