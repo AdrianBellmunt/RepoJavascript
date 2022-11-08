@@ -3,7 +3,7 @@ window.onload = function () {
 }
 
 function cambiarcolor() {
-    var indice = this.selectedIndex
-    var valorOpcion = this[indice].value
-    document.getElementById("parrafo").style.backgroundColor = valorOpcion;
+    var index = this.selectedIndex
+    var valor = this[index].value
+    document.getElementById("parrafo").style.backgroundColor = valor;
 }
