@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>Ejemplo con Ajax para sacar Fichero de Texto </title>
+<script type = "text/javascript">
+var XMLHttpRequestObject = false;
+if (window.XMLHttpRequest) {
+XMLHttpRequestObject = new XMLHttpRequest();
+} else if (window.ActiveXObject) {
+XMLHttpRequestObject = new ActiveXObject("Microsoft.XMLHTTP");
+}
+function sacardatos(){
+if(XMLHttpRequestObject) {
+var objeto = document.getElementById("contenedor");
+XMLHttpRequestObject.open("GET", "codigoJSON.json");
+XMLHttpRequestObject.onreadystatechange = function(){
+if (XMLHttpRequestObject.readyState == 4 &&
+XMLHttpRequestObject.status == 200) {
+objeto.innerHTML = XMLHttpRequestObject.responseText;
+}
+}
+XMLHttpRequestObject.send(null);
+}
+}
+</script>
+</head>
+<body>
+<H1>Mostrar Fichero de Texto en Ajax</H1>
+<form>
+<input type = "button" value = "Mostrar Fichero" onclick =
+"sacardatos()">
+</form>
+<div id="contenedor" style="background-color:#fefffe;">
+<p> Mostrar&aacute; contenido del fichero JSON </p>
+</div>
+</body>
+</html>

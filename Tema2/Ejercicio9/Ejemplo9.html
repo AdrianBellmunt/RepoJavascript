@@ -1,20 +1,33 @@
-<!DOCTYPE html>
 <html>
-    <head>
-        <script>
-            function showHint(str) {
-              if (str.length == 0) { 
-                document.getElementById("txtHint").innerHTML = "";
-                return;
-              }
-              const xhttp = new XMLHttpRequest();
-              xhttp.onload = function() {
-                document.getElementById("txtHint").innerHTML =
-                this.responseText;
-              }
-              xhttp.open("GET", "gethint.php?q="+str);
-              xhttp.send();   
-            }
-            </script>
-    </head>
+<head>
+<title>Ejemplo con Ajax para sacar Fichero de Texto </title>
+<script type = "text/javascript">
+var XMLHttpRequestObject = false;
+if (window.XMLHttpRequest) {
+XMLHttpRequestObject = new XMLHttpRequest();
+} else if (window.ActiveXObject) {
+XMLHttpRequestObject = new ActiveXObject("Microsoft.XMLHTTP");
+}
+setTimeout(sacardatos,5000);
+function sacardatos(){
+if(XMLHttpRequestObject) {
+var objeto = document.getElementById("contenedor");
+XMLHttpRequestObject.open("GET", "archivo.php");
+XMLHttpRequestObject.onreadystatechange = function(){
+if (XMLHttpRequestObject.readyState == 4 &&
+XMLHttpRequestObject.status == 200) {
+objeto.innerHTML = XMLHttpRequestObject.responseText;
+}
+}
+XMLHttpRequestObject.send(null);
+}
+}
+</script>
+</head>
 <body>
+<H1>Mostrar Fichero de PHP con pantalla de espera en Ajax</H1>
+<div id="contenedor" style="background-color:#fefffe;">
+  <img src="https://odm.com.mx/imagen/loading25.gif" alt="">
+</div>
+</body>
+</html>
