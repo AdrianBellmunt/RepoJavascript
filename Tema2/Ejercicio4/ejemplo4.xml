@@ -1,9 +1,8 @@
- <?xml version="1.0" encoding="UTF-8"?>  
- <saludo>  
-  <i>  
-    Hola holita  
-  </i>  
- </saludo>  
-
-
- 
+<?xml version="1.0" encoding="UTF-8"?>
+<contenido>
+<lista>A</lista>
+<lista>B</lista>
+<lista>C</lista>
+<lista>D</lista>
+<lista>E</lista>
+</contenido> 

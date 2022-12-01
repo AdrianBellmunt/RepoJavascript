@@ -1,4 +1,4 @@
-<html>
+<!-- <html>
 <head>
 <title>Ejemplo con Ajax para sacar Fichero de Texto </title>
 <script type = "text/javascript">
@@ -31,4 +31,30 @@ function loadXMLDoc() {
 </div>
 </body>
 </html>
+ -->
 
+ <html>
+  <head>
+  <script type = "text/javascript">
+
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
+  const xmlDoc = this.responseXML;
+  const x = xmlDoc.getElementsByTagName("lista");
+  let txt = "";
+  for (let i = 0; i < x.length; i++) {
+  txt = txt + x[i].childNodes[0].nodeValue + "<br>";
+  }
+  document.getElementById("contenido").innerHTML = txt;
+  }
+  xhttp.open("GET", "ejemplo4.xml");
+  xhttp.send();
+</script>
+<title>Sacar contenido de XML </title>
+</head>
+<body>
+<h1>Mostrar Fichero XML</h1>
+<p id="contenido"></p>
+</body>
+
+</html>

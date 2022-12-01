@@ -4,8 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="E5.js"></script>
-
+    <script type = "text/javascript">
+        var XMLHttpRequestObject = false;
+        if (window.XMLHttpRequest) {
+        XMLHttpRequestObject = new XMLHttpRequest();
+        } else if (window.ActiveXObject) {
+        XMLHttpRequestObject = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        function sacardatos(){
+        if(XMLHttpRequestObject) {
+        var objeto = document.getElementById("demo");
+        XMLHttpRequestObject.open("GET", "./E5.js");
+        XMLHttpRequestObject.onreadystatechange = function(){
+        if (XMLHttpRequestObject.readyState == 4 &&
+        XMLHttpRequestObject.status == 200) {
+        //objeto.innerHTML = XMLHttpRequestObject.responseText;
+        eval(XMLHttpRequestObject.responseText);
+        }
+        }
+        XMLHttpRequestObject.send(null);
+        
+        }
+        }
+        </script>
+<script src="E5.js"></script>
     <title>Document</title>
 </head>
 <body>

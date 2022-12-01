@@ -15,7 +15,8 @@ XMLHttpRequestObject.open("GET", "codigoJSON.json");
 XMLHttpRequestObject.onreadystatechange = function(){
 if (XMLHttpRequestObject.readyState == 4 &&
 XMLHttpRequestObject.status == 200) {
-objeto.innerHTML = XMLHttpRequestObject.responseText;
+objetojavascript = JSON.parse(XMLHttpRequestObject.responseText);
+objeto.innerHTML = objetojavascript.nombre+" "+objetojavascript.capital+" "+objetojavascript.textoCapital;
 }
 }
 XMLHttpRequestObject.send(null);
