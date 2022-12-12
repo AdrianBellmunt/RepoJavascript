@@ -1,49 +1,40 @@
-<!-- <!DOCTYPE html>
-<html>
-    <head>
-        <script>
-            function showHint(str) {
-              if (str.length == 0) { 
-                document.getElementById("gethint").innerHTML = "";
-                return;
-              }
-              const xhttp = new XMLHttpRequest();
-              xhttp.onload = function() {
-                document.getElementById("gethint").innerHTML =
-                this.responseText;
-              }
-              xhttp.open("GET", "gethint.php?q="+str);
-              xhttp.send();   
-            }
-            </script>
-    </head>
-<body> -->
-
-
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Ejemplo 9_1</title>
-<script type="text/javascript" src="codigo.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type = "text/javascript">
+        var XMLHttpRequestObject = false;
+        if (window.XMLHttpRequest) {
+        XMLHttpRequestObject = new XMLHttpRequest();
+        } else if (window.ActiveXObject) {
+        XMLHttpRequestObject = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        function sacardatos(){
+        if(XMLHttpRequestObject) {
+        var objeto = document.getElementById("demo");
+        XMLHttpRequestObject.open("POST", "./codigo.php");
+        XMLHttpRequestObject.onreadystatechange = function(){
+        if (XMLHttpRequestObject.readyState == 4 &&
+        XMLHttpRequestObject.status == 200) {
+        objeto.innerHTML = XMLHttpRequestObject.responseText;
+    
+        }
+        }
+        XMLHttpRequestObject.send(null);
+        
+        }
+        }
+        </script>
+
+    <title>Document</title>
 </head>
-<body>
-<h1>Envio de datos por POST</h1>
-<h2>Comprobación del siguiente formulario.</h2>
-<form name="datos">
-<p>Escribe un email: <input type="text" name="miemail" ></p>
-<p>Escribe una contraseña: (entre 6 y 10 caracteres) 
-   <input type="password" name="micontra1"/></p>
-<p>Repite la contraseña: 
-   <input type="password" name="micontra2"/></p>
-<p>Enviar formulario: 
-   <input type="button" value="Enviar" onclick="enviar()" /></p>
-<p>Reiniciar formulario: 
-   <input type="reset" value="Reiniciar" /></p>
-</form>
-<h3>Comprobación</h3>
-<div id="comp">
-<p>Aquí se comprobarán los datos</p> 
-</div>
+<body onload="sacardatos()">
+
+<div id="demo">
+
+    </div>
+    
 </body>
 </html>
