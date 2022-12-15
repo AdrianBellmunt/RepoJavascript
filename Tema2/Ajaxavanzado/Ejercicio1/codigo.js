@@ -1,22 +1,26 @@
-window.onload = function(){
-    var formulario = document.getElementById("formulario");
-    formulario.addEventListener("submit", iniciarPrograma);
+window.onload = function (){
+    var boton = document.getElementById('enviar')
+    boton.addEventListener('click', enviar)
 }
-function iniciarPrograma(){
-    var XMLHttpRequestObject = false;  
+    
+var XMLHttpRequestObject = false;
+XMLHttpRequestObject = new XMLHttpRequest();
 
-    if (window.XMLHttpRequest) {
-        XMLHttpRequestObject = new XMLHttpRequest();
-    } else if (window.ActiveXObject) {
-        XMLHttpRequestObject = new ActiveXObject("Microsoft.XMLHTTP");
-    }
-    if(XMLHttpRequestObject) {
-        var objeto = document.getElementById("contenedor");
-        XMLHttpRequestObject.open("POST", "ejercicio1.php");
+function enviar() {
+    //Recoger datos del formulario:
+    var nombre=document.datos.nombreCliente.value; //Email escrito por el usuario
+    //Escribir la url para enviar los datos anteriores:
+    ruta="ejercicio1.php" //ruta del archivo
+    envio1="nombreCliente="+nombre; //datos email
+    url=ruta+"?"+envio1; //url para enviar
+    if(XMLHttpRequestObject){
+        var contenedor = document.getElementById('contenedor')
+        XMLHttpRequestObject.open("GET", url)
         XMLHttpRequestObject.onreadystatechange = function(){
-            if (XMLHttpRequestObject.readyState == 4 && XMLHttpRequestObject.status == 200) {
-                objeto.innerHTML = XMLHttpRequestObject.responseText;
-            }   
+            if (XMLHttpRequestObject.readyState == 4 &&
+                XMLHttpRequestObject.status == 200) {
+                contenedor.innerHTML = XMLHttpRequestObject.responseText;
+            }
         }
         XMLHttpRequestObject.send(null);
     }

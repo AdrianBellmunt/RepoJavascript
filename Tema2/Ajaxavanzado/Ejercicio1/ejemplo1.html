@@ -1,27 +1,24 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>El primer script</title>
+<title>Ejercicio 1 ajax avanzado</title>
 <script type="text/javascript" src="codigo.js"></script>
 </head>
 <body>
-    <noscript>La página no se muestra de forma correcta
-    </noscript>
-    <form id="formulario">
-        Nombre:
-        <input type="text" name="nombre" id="stringNombre"> 
-        <br>
-        Apellidos:
-        <input type="text" name="apellidos" id="stringApellido">
-        <br>
-        Telefono:
-        <input type="text" name="telefono" id="integerTelefono">
-        <br>
-        DNI:
-        <input type="text" name="dni" id="integerdni">
-        <br>
-        <button type="submit" id="botonEnviar">Guardar Cambios</button>
-    </form>
+<h1>Envio de datos por GET</h1>
+<h2>Comprobación del siguiente formulario.</h2>
+<form name="datos">
+<p>Introdcir el nombre del cliente: <input type="text" name="nombreCliente" ></p>
+
+<p>Enviar formulario: 
+   <input type="button" id="enviar" value="Enviar"/>
+<p>Reiniciar formulario: 
+   <input type="reset" value="Reiniciar" /></p>
+</form>
+<h3>Resultado de datos consultados</h3>
+<div id="contenedor">
+<p>Aquí se cargaran los datos del Cliente:</p> 
+</div>
 </body>
 </html>
