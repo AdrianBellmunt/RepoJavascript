@@ -1,4 +1,4 @@
-?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Blogs>
   <blog name="WebLog Expert - Powerful log analyzer"
         description="Download and analyze Apache and IIS Web logs on your own PC."
