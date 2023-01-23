@@ -1,0 +1,14 @@
+#ejemplo_fade{
+	background:url("img/fashion2.jpg");
+	position:relative;
+	width:200px;
+	height:200px;
+	cursor:pointer;
+}
+#ejemplo_fade{
+	background:url("imagen/imagen2.png");
+	position:relative;
+	width:200px;
+	height:200px;
+	cursor:pointer;
+}
