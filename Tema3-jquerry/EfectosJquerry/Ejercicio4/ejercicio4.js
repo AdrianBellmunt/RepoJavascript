@@ -1,5 +1,5 @@
 $(document).ready(function() {
   $("h1").click(function() {
-    $(this).animate({ color: "red" }, "slow");
+    $(".h1").animate({ color: "red" }, "slow");
   });
 });
