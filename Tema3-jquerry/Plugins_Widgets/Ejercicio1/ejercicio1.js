@@ -1,6 +1,11 @@
 $(document).ready(function() {
     $("#btn").click((function () {
-        $("p").desaparecer();
+        $("p").desaparece();
+        
+    }));
+
+    $("#btn2").click((function () {
+        $("p").mostrar();
         
     }));
 });
