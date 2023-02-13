@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>ParteA</title>
+<script type = "text/javascript">
+var XMLHttpRequestObject = false;
+if (window.XMLHttpRequest) {
+XMLHttpRequestObject = new XMLHttpRequest();
+} else if (window.ActiveXObject) {
+XMLHttpRequestObject = new ActiveXObject("Microsoft.XMLHTTP");
+}
+function sacardatos(datos, idDiv){
+if(XMLHttpRequestObject) {
+var objeto = document.getElementById(idDiv);
+XMLHttpRequestObject.open("GET", datos);
+XMLHttpRequestObject.onreadystatechange = function(){
+if (XMLHttpRequestObject.readyState == 4 &&
+XMLHttpRequestObject.status == 200) {
+objeto.innerHTML = XMLHttpRequestObject.responseText;
+}
+}
+XMLHttpRequestObject.send(null);
+}
+}
+</script>
+<script type="text/javascript" src="jquery-3.6.2.js"></script>
+<script type="text/javascript" src="funciones.js"></script>
+
+</head>
+
+<body onload="sacardatos('fichero.txt','contenedor')">
+<H1>Ejercicio parte A</H1>
+<img width="300px" src="img/viaje.jpeg" alt="" id="img1">
+
+<div id="contenedor">
+
+</div>
+
+<button id="btn">cambiar color de fondo</button>
+
+</body>
+</html>
