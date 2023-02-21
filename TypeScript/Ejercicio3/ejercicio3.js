@@ -1,4 +1,9 @@
 //Declaración de variables
+window.onload= function () {
+
+    document.getElementById("operar").addEventListener("click", sumarNumeros);
+}
+
 var num1;
 var num2;
 var resultado;
@@ -16,3 +21,4 @@ function sumarNumeros() {
     //Agregar el elemento creado al documento HTML 
     document.body.appendChild(elementoResultado);
 }
+
